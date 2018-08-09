@@ -2,6 +2,7 @@ package grid
 
 import (
 	"fmt"
+	"log"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -12,6 +13,23 @@ func ExampleGRID() {
 	fmt.Println(g.String())
 	// Output:
 	// grid:facebook:comment:88532
+}
+
+func ExampleParse() {
+	g, err := Parse("grid:facebook:comment:88532")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("GRID:       ", g.String())
+	fmt.Println("Namespace:  ", g.Namespace)
+	fmt.Println("Object Type:", g.ObjectType)
+	fmt.Println("Object ID:  ", g.ObjectID)
+	// Output:
+	// GRID:        grid:facebook:comment:88532
+	// Namespace:   facebook
+	// Object Type: comment
+	// Object ID:   88532
 }
 
 func TestParse(t *testing.T) {

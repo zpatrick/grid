@@ -31,7 +31,7 @@ import (
 )
 
 func main() {
-        g, err := grid.Parse("grid:facebook:comment:53881")
+        g, err := grid.Parse("grid:facebook:comment:88532")
         if err != nil {
                 log.Fatal(err)
         }
@@ -46,10 +46,10 @@ func main() {
 Output:
 ```console
 $ go run main.go
-GRID:        grid:facebook:comment:53881
+GRID:        grid:facebook:comment:88532
 Namespace:   facebook
 Object Type: comment
-Object ID:   53881
+Object ID:   88532
 ```
 
 ## License
