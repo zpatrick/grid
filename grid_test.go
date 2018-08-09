@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func ExampleGRIDString() {
+func ExampleGRID() {
 	g := New("facebook", "comment", "88532")
 	fmt.Printf("GRID: %s\n", g)
 	// Output:

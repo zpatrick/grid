@@ -6,7 +6,8 @@ import (
 )
 
 // GRID (Global Resource ID) uniquely identify resources.
-// the GRID format is "grid:namespace:object_type:object_id"
+// the GRID format is
+//    grid:namespace:object_type:object_id
 type GRID struct {
 	Namespace  string
 	ObjectType string
