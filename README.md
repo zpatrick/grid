@@ -8,7 +8,7 @@
 GRID is a package that can be used to uniquely identify resources using Global Resource IDs (GRIDs). 
 The GRID format is:
 ```
-grid:namespace:object_type:object_id
+grid:namespace:owner:object_type:object_id
 ```
 
 ## Download
