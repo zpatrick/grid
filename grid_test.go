@@ -9,7 +9,7 @@ import (
 
 func ExampleGRID() {
 	g := New("facebook", "comment", "88532")
-	fmt.Println(g)
+	fmt.Println(g.String())
 	// Output:
 	// grid:facebook:comment:88532
 }
