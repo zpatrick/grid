@@ -55,4 +55,4 @@ Object ID:   53881
 ## License
 This work is published under the MIT license.
 
-Please see the `LICENSE` file for details.
+Please see the [LICENSE](/LICENSE) file for details.
