@@ -13,8 +13,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("GRID: ", g.String())
-	fmt.Println("Namespace:", g.Namespace)
+	fmt.Println("GRID:       ", g.String())
+	fmt.Println("Namespace:  ", g.Namespace)
 	fmt.Println("Object Type:", g.ObjectType)
-	fmt.Println("Object ID:", g.ObjectID)
+	fmt.Println("Object ID:  ", g.ObjectID)
 }
