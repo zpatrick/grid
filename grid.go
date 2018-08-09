@@ -6,29 +6,29 @@ import (
 )
 
 // Format of all GRIDs
-const Format = "grid:namespace:owner:object_type:object_id"
+const Format = "grid:namespace:owner:resource_type:resource_id"
 
 // GRID (Global Resource ID) objects are used to uniquely identify resources.
 type GRID struct {
-	Namespace  string
-	Owner      string
-	ObjectType string
-	ObjectID   string
+	Namespace    string
+	Owner        string
+	ResourceType string
+	ResourceID   string
 }
 
 // New returns a new GRID object.
-func New(namespace, owner, objectType, objectID string) GRID {
+func New(namespace, owner, resourceType, resourceID string) GRID {
 	return GRID{
-		Namespace:  namespace,
-		Owner:      owner,
-		ObjectType: objectType,
-		ObjectID:   objectID,
+		Namespace:    namespace,
+		Owner:        owner,
+		ResourceType: resourceType,
+		ResourceID:   resourceID,
 	}
 }
 
 // String returns g in string format.
 func (g GRID) String() string {
-	return fmt.Sprintf("grid:%s:%s:%s:%s", g.Namespace, g.Owner, g.ObjectType, g.ObjectID)
+	return fmt.Sprintf("grid:%s:%s:%s:%s", g.Namespace, g.Owner, g.ResourceType, g.ResourceID)
 }
 
 // Parse attempts to parse a GRID from s.

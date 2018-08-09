@@ -21,26 +21,26 @@ func ExampleParse() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("GRID:       ", g.String())
-	fmt.Println("Namespace:  ", g.Namespace)
-	fmt.Println("Owner:      ", g.Owner)
-	fmt.Println("Object Type:", g.ObjectType)
-	fmt.Println("Object ID:  ", g.ObjectID)
+	fmt.Println("GRID:         ", g.String())
+	fmt.Println("Namespace:    ", g.Namespace)
+	fmt.Println("Owner:        ", g.Owner)
+	fmt.Println("Resource Type:", g.ResourceType)
+	fmt.Println("Resource ID:  ", g.ResourceID)
 	// Output:
-	// GRID:        grid:facebook:user123:comment:88532
-	// Namespace:   facebook
-	// Owner:       user123
-	// Object Type: comment
-	// Object ID:   88532
+	// GRID:          grid:facebook:user123:comment:88532
+	// Namespace:     facebook
+	// Owner:         user123
+	// Resource Type: comment
+	// Resource ID:   88532
 }
 
 func TestParse(t *testing.T) {
 	cases := map[string]GRID{
-		"grid:namespace:owner:object_type:object_id": New("namespace", "owner", "object_type", "object_id"),
-		"grid::owner:object_type:object_id":          New("", "owner", "object_type", "object_id"),
-		"grid:::object_type:object_id":               New("", "", "object_type", "object_id"),
-		"grid::::object_id":                          New("", "", "", "object_id"),
-		"grid::::":                                   New("", "", "", ""),
+		"grid:namespace:owner:resource_type:resource_id": New("namespace", "owner", "resource_type", "resource_id"),
+		"grid::owner:resource_type:resource_id":          New("", "owner", "resource_type", "resource_id"),
+		"grid:::resource_type:resource_id":               New("", "", "resource_type", "resource_id"),
+		"grid::::resource_id":                            New("", "", "", "resource_id"),
+		"grid::::":                                       New("", "", "", ""),
 	}
 
 	for s, expected := range cases {
@@ -58,11 +58,11 @@ func TestParse(t *testing.T) {
 func TestParseError(t *testing.T) {
 	cases := map[string]string{
 		"missing 5 sections":        "",
-		"missing 4 sections":        "object_id",
-		"missing 3 sections":        "object_type:object_id",
-		"missing 2 sections":        "owner:object_type:object_id",
-		"missing 2 section":         "namespace:owner:object_type:object_id",
-		"doesn't start with 'grid'": "rgid:namespace:object_type:object_id",
+		"missing 4 sections":        "resource_id",
+		"missing 3 sections":        "resource_type:resource_id",
+		"missing 2 sections":        "owner:resource_type:resource_id",
+		"missing 2 section":         "namespace:owner:resource_type:resource_id",
+		"doesn't start with 'grid'": "rgid:namespace:resource_type:resource_id",
 	}
 
 	for name, input := range cases {

@@ -8,7 +8,7 @@
 GRID is a package that can be used to uniquely identify resources using Global Resource IDs (GRIDs). 
 The GRID format is:
 ```
-grid:namespace:owner:object_type:object_id
+grid:namespace:owner:resource_type:resource_id
 ```
 
 ## Download
@@ -36,22 +36,22 @@ func main() {
                 log.Fatal(err)
         }
 
-        fmt.Println("GRID:       ", g.String())
-        fmt.Println("Namespace:  ", g.Namespace)
-        fmt.Println("Owner:      ", g.Owner)
-        fmt.Println("Object Type:", g.ObjectType)
-        fmt.Println("Object ID:  ", g.ObjectID)
+        fmt.Println("GRID:         ", g.String())
+        fmt.Println("Namespace:    ", g.Namespace)
+        fmt.Println("Owner:        ", g.Owner)
+        fmt.Println("Resource Type:", g.ResourceType)
+        fmt.Println("Resource ID:  ", g.ResourceID)
 }
 ```
 
 Output:
 ```console
 $ go run main.go
-GRID:        grid:facebook:comment:88532
-Namespace:   facebook
-Owner:       user123
-Object Type: comment
-Object ID:   88532
+GRID:          grid:facebook:comment:88532
+Namespace:     facebook
+Owner:         user123
+Resource Type: comment
+Resource ID:   88532
 ```
 
 ## License
