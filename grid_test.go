@@ -9,9 +9,9 @@ import (
 
 func ExampleGRID() {
 	g := New("facebook", "comment", "88532")
-	fmt.Printf("GRID: %s\n", g)
+	fmt.Println(g)
 	// Output:
-	// GRID: grid:facebook:comment:88532
+	// grid:facebook:comment:88532
 }
 
 func TestParse(t *testing.T) {
