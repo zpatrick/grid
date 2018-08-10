@@ -61,7 +61,7 @@ func TestParseError(t *testing.T) {
 		"missing 4 sections":        "resource_id",
 		"missing 3 sections":        "resource_type:resource_id",
 		"missing 2 sections":        "owner:resource_type:resource_id",
-		"missing 2 section":         "namespace:owner:resource_type:resource_id",
+		"missing 1 section":         "namespace:owner:resource_type:resource_id",
 		"doesn't start with 'grid'": "rgid:namespace:resource_type:resource_id",
 	}
 
