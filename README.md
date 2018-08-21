@@ -11,6 +11,18 @@ The GRID format is:
 grid:namespace:owner:resource_type:resource_id
 ```
 
+
+TODO: Potential change 
+**grid:namespace:service:resouce_type:resource_id**
+
+```
+
+grid::mashup:verse:v123
+grid:prod:tbp:video:v123
+grid:dev:tbp:video:v456
+grid:prod:accounts:user:u123
+```
+
 ## Download
 To download this package, run:
 ```
